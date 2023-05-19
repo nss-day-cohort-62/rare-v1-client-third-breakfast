@@ -12,14 +12,12 @@ export const PostList = () => {
     return <>
     <article className="posts">
         {
-            posts.map(post => {
+            posts.sort((b, a) => a.publication_date.localeCompare(b.publication_date)).map(post => {
                 return <section key={`post--${post.id}`} className="post">
                     <div className="category">Category: {post.category}</div>
                     <div className="title">Title: {post.title}</div>
                     <div className="publication_date">Published on: {post.publication_date}</div>
-                    <div className="author">Author: {post.user}
-                    
-                    </div>
+                    <div className="author">Author: {post.user.full_name}</div>
                 </section>
             })
         }
