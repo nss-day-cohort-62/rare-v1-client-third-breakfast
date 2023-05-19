@@ -13,11 +13,20 @@ export const UserDetails = () => {
     }, [userId])
 
 
-    return (
+    return <>
         <section key={`user--${userId}`} className="">
             <h1 className="">
-                {userToDetail.bio}
+                <p>User Name: {userToDetail.user?.username}</p>
+                <p>First Name: {userToDetail.user?.first_name}</p>
+                <p>Last Name: {userToDetail.user?.last_name}</p>
+                <p>Email: {userToDetail.user?.email}</p>
+                <p>Image URL: {userToDetail?.profile_image_url}</p>
+                <p>Date Joined: {userToDetail?.created_on}</p>
+                <p>Bio: {userToDetail?.bio}</p>
             </h1>
         </section>
-    )
+        <button onClick={() => {
+            navigate("/users")
+        }}>Return to Users List</button>
+    </>
 }
