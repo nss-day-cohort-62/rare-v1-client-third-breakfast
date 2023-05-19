@@ -3,7 +3,7 @@ import { Login } from "../components/auth/Login"
 import { Register } from "../components/auth/Register"
 import { Authorized } from "./Authorized"
 import { CategoryList } from "../components/categories/CategoryList"
-
+import { TagForm } from "../components/tag/TagForm"
 import { TagList } from "../components/tag/Tags"
 import { UserList } from "../components/user/UserList"
 import { CategoryForm } from "../components/categories/CategoryForm"
@@ -21,6 +21,7 @@ export const ApplicationViews = ({ token, setToken }) => {
         <Route path="/categories/create" element={<CategoryForm /> } />
         <Route path="/users" element={<UserList />} />
         <Route path="/tags" element={<TagList />} />
+        <Route path="/tags/create" element={<TagForm />} />
 
       </Route>
     </Routes>
