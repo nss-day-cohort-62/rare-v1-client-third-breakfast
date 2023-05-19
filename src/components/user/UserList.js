@@ -16,7 +16,7 @@ export const UserList = () => {
             .sort((a, b) => a.user.last_name.localeCompare(b.user.last_name))
             .map(user => {
                 return <section key={`user--${user.id}`} className="">
-                    <h1 className="">{user.user.username} - {user.user.first_name} {user.user.last_name}  - {user.user.email}</h1>
+                    <h1 className=""><a onClick={() => navigate(`/users/${user.id}`)}>{user.user.username}</a> {" "}- {user.user.first_name} {user.user.last_name}  - {user.user.email}</h1>
                 </section>
             })
     )
