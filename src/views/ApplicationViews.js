@@ -27,6 +27,7 @@ export const ApplicationViews = ({ token, setToken }) => {
         <Route path="/tags" element={<TagList />} />
         <Route path="/users/:userId" element={<UserDetails />} />
         <Route path="/tags/create" element={<TagForm />} />
+        <Route path="/tags/create/:tagId" element={<TagForm />} />
 
       </Route>
     </Routes>
